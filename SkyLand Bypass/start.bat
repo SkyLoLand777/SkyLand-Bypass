@@ -1,10 +1,10 @@
 @echo off
-title Fluxus Key Bypass
+title SkyLand Key Bypass
 color d
-echo To get your HWID, click on the "Get Key" button in the app, and copy the data from the HWID query &echo.
-echo Keep in mind, each HWID has it's own Key &echo.
-echo Example: https://flux.li/windows/start.php?HWID=XXXX (Copy all XXXX) &echo. &echo.
-set /p hwid=Enter Your HWID: 
+echo Para obter seu HWID, clique no botão "Obter chave" no aplicativo e copie os dados da Pesquisa &echo.
+echo Tenha em mente que cada HWID tem sua propria chave &echo.
+echo Exemplo: https://flux.li/windows/start.php?HWID=XXXX (Copie Tudo Que Aparecer No Lugar De XXX) &echo. &echo.
+set /p hwid=Coloque Seu HWID: 
 cls
 color C
 node index.js %hwid%
