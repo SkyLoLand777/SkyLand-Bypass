@@ -2,7 +2,7 @@
 
  Github: https://github.com/SkyLoLand777/SkyLand-Bypass
 
- Não está funcionando como esperado? Entre em contato comigo diretamente.
+ Não está funcionando como esperado? Entre em contato comigo diretamente. (SkyLand)
 
 */
 const req = require('./request.js')
@@ -34,13 +34,13 @@ async function bypass(hwid) {
     await req.request("https://fluxteam.net/windows/checkpoint/check2.php", commonheader)
     await wait(1)
     const response = await req.request("https://fluxteam.net/windows/checkpoint/main.php",
-        commonheader // "Tentar contornar o sistema de chaves do Fluxus fará com que você seja banido de usar o Fluxus."
+        commonheader // "Tentar contornar o sistema de chaves do Fluxus fará com que você seja banido de usar o Fluxus. (SkyLand)"
     )
     console.log("\nPassando Pelo Ultimo Checkpoint E Pegando Key...")
     const parsed = cheerio.load(response['data'])
     const key = parsed("body > main > code:nth-child(5)").text()
-    console.log("\nSua Key È:", key.replace(/\s+/g, '') + '\n')
+    console.log("\nSkyLoLand Disse Que Sua Key È:", key.replace(/\s+/g, '') + '\n')
 }
 
-// We don't really need to sanitize data, it's for you not me.
+// Não precisamos realmente higienizar os dados, é para você, não para mim. (SkyLand)
 bypass(args[2])
