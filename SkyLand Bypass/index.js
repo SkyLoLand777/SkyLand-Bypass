@@ -1,8 +1,8 @@
 /*
 
- Github: https://github.com/MEMEZNUT999/fluxus-key-bypasser
+ Github: https://github.com/SkyLoLand777/SkyLand-Bypass
 
- Not working as expected? Start an issue or contact me directly.
+ Não está funcionando como esperado? Entre em contato comigo diretamente.
 
 */
 const req = require('./request.js')
@@ -18,7 +18,7 @@ async function bypass(hwid) {
         'Referer': 'https://linkvertise.com/',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36'
     }
-    console.log("Starting bypass")
+    console.log("Iniciando Sky Bypass")
     await req.request(start_url, {
         'Referer': 'https://fluxteam.net/'
     })
@@ -34,7 +34,7 @@ async function bypass(hwid) {
     await req.request("https://fluxteam.net/windows/checkpoint/check2.php", commonheader)
     await wait(1)
     const response = await req.request("https://fluxteam.net/windows/checkpoint/main.php",
-        commonheader // "Trying to bypass the Fluxus key system will get you banned from using Fluxus."
+        commonheader // "Tentar contornar o sistema de chaves do Fluxus fará com que você seja banido de usar o Fluxus."
     )
     console.log("\nBypassed final checkpoint & getting key...")
     const parsed = cheerio.load(response['data'])
