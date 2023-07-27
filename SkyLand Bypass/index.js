@@ -28,18 +28,18 @@ async function bypass(hwid) {
         'Cookie': commoncookie
     })
     await wait(1)
-    console.log("\nBypassed checkpoint 1")
+    console.log("\nCheckpoint 1 Completo")
     await req.request("https://fluxteam.net/windows/checkpoint/check1.php", commonheader)
-    console.log("\nBypassed checkpoint 2")
+    console.log("\nCheckpoint 2 Completo")
     await req.request("https://fluxteam.net/windows/checkpoint/check2.php", commonheader)
     await wait(1)
     const response = await req.request("https://fluxteam.net/windows/checkpoint/main.php",
         commonheader // "Tentar contornar o sistema de chaves do Fluxus fará com que você seja banido de usar o Fluxus."
     )
-    console.log("\nBypassed final checkpoint & getting key...")
+    console.log("\nPassando Pelo Ultimo Checkpoint E Pegando Key...")
     const parsed = cheerio.load(response['data'])
     const key = parsed("body > main > code:nth-child(5)").text()
-    console.log("\nYour key is:", key.replace(/\s+/g, '') + '\n')
+    console.log("\nSua Key È:", key.replace(/\s+/g, '') + '\n')
 }
 
 // We don't really need to sanitize data, it's for you not me.
